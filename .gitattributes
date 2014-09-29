@@ -1,0 +1,10 @@
+* text=auto
+*.sh text eol=lf
+
+#################
+## HTML
+#################
+*.htm text
+*.htm diff=html
+*.html text
+*.html diff=html
