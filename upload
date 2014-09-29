@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# args:
+# ./upload <command>
+# This will run the build using 2 environment variables:
+# REPO_SNAPSHOTS and REPO_RELEASES both representing a path to a folder
+# The build should publish the builds to the correct repo automatically.
+
+command=$1
+repo_dir=$(dirname $0)
+export REPO_SNAPSHOTS="$repo_dir/snapshots"
+export REPO_RELEASES="$repo_dir/releases"
+
+echo "Publishing artifacts..."
+$command && {
+	cd $repo_dir
+  echo "Deploying changes..."
+	git config user.name "Lapislazuli"
+	git config user.email "lapislazuli@lapis.blue"
+	git add -A
+	git commit -m "Publish $TRAVIS_REPO_SLUG@$TRAVIS_COMMIT (Build $TRAVIS_BUILD_NUMBER)"
+	git push origin gh-pages && echo "Successfully published artifacts to the repository."
+} || {
+	echo "Unable to publish artifacts. Please try again later."
+}
