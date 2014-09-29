@@ -7,9 +7,11 @@
 # The build should publish the builds to the correct repo automatically.
 
 command=$1
-repo_dir=$(dirname $0)
-export REPO_SNAPSHOTS="$repo_dir/snapshots"
+repo_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export REPO_RELEASES="$repo_dir/releases"
+export REPO_SNAPSHOTS="$repo_dir/snapshots"
+echo "Release repo: $REPO_RELEASES"
+echo "Snapshot repo: $REPO_SNAPSHOTS"
 
 echo "Publishing artifacts..."
 $command && {
