@@ -21,7 +21,7 @@ $command && {
 	git config user.email "lapislazuli@lapis.blue"
 	git add -A
 	git commit -m "Publish $TRAVIS_REPO_SLUG@$TRAVIS_COMMIT (Build $TRAVIS_BUILD_NUMBER)"
-	git push origin gh-pages && echo "Successfully published artifacts to the repository."
+	git push -q --progress origin gh-pages && echo "Successfully published artifacts to the repository."
 } || {
 	echo "Unable to publish artifacts. Please try again later."
 }
