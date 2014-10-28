@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.bukkit</groupId>
+  <artifactId>bukkit</artifactId>
+  <versioning>
+    <release>1.7.10-R0.1</release>
+    <versions>
+      <version>1.7.10-R0.1</version>
+    </versions>
+    <lastUpdated>20141028174327</lastUpdated>
+  </versioning>
+</metadata>
