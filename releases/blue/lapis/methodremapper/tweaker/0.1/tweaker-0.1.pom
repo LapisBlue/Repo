@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>blue.lapis.methodremapper</groupId>
+  <artifactId>tweaker</artifactId>
+  <version>0.1</version>
+  <dependencies>
+    <dependency>
+      <groupId>blue.lapis.methodremapper</groupId>
+      <artifactId>remapper</artifactId>
+      <version>0.1</version>
+      <scope>runtime</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+  <name>MethodRemapperTweaker</name>
+  <description>TODO</description>
+  <organization>
+    <name>Lapis</name>
+    <url>https://lapis.blue</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>https://github.com/LapisBlue/MethodRemapper</url>
+    <connection>scm:git:https://github.com/LapisBlue/MethodRemapper.git</connection>
+    <developerConnection>scm:git:git@github.com:LapisBlue/MethodRemapper.git</developerConnection>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/LapisBlue/MethodRemapper/issues</url>
+  </issueManagement>
+</project>
